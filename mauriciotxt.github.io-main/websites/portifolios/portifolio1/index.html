@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index" />
+    <meta
+      name="keywords"
+      content="javascript, html, css, daytrading, game development"
+    />
+    <meta name="author" content="Mauricio Collis de Oliveira" />
+    <meta name="description" content="The official Website of Mauricio Collis de Oliveira, Frontend Developer from London." />
+    <meta name="viewport" content="width=device-width, minimum-scale=1" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Mauricio Collis de Oliveira - Frontend Developer</title>
+    <link rel="shortcut icon" href="favicon30f4.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+   <link rel="manifest" href="assets/manifest.json">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      a,
+      body,
+      h1,
+      h2,
+      html,
+      li,
+      p,
+      span,
+      ul {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+      }
+      body {
+        background-color: rgb(172, 159, 246);
+        background: radial-gradient(circle at bottom center, rgb(246,214,159),rgb(206,145,215));
+        font-family: "Roboto", Tahoma, Helvetica, Verdana, sans-serif;
+        font-display: swap;
+        font-size: 14px;
+        line-height: 1.3;
+        color: #333;
+      }
+      .page-background {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-image: url("");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      .page-container {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+      .page-content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        padding-top: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+      }
+      .profile-column {
+        width: 100%;
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+      .profile {
+        min-height: 100vh;
+        line-height: 1.4;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        min-width: 320px;
+        position: relative;
+      }
+      .profile-content {
+        width: 620px;
+        max-width: calc(100vw - 10px);
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+        margin-top: 60px;
+      }
+      .profile-content .head .image {
+        background-color: white;
+        background-image: url(assets/apple-icon-144x144.png);
+        background-size: cover;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.2),
+          0 0 2px 0 rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        margin-top: -60px;
+        margin-bottom: 20px;
+        width: 120px;
+        height: 120px;
+      }
+      .profile-content .head .name {
+        font-size: 20px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin: 0;
+        color: #333;
+      }
+      .profile-content .head .headline {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin: 0;
+      }
+      .profile-content .body {
+        padding: 20px;
+      }
+      .profile-content .body .spotlight {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .profile-content .body .spotlight .button {
+        background-color: #333;
+        box-shadow: inset 0 0 0 100px hsla(0, 0%, 100%, 0);
+        min-width: 100%;
+        font-size: 15px;
+        transition: all 0.15s ease-out;
+        line-height: 38px;
+        padding: 0 20px;
+        text-decoration: none !important;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        box-sizing: border-box;
+        white-space: nowrap;
+        user-select: none;
+        font-size: 14px;
+        border: 1px solid #333;
+        color: #fff;
+        transition: all 0.15s ease-out;
+      }
+      .profile-content .body .bio {
+        font-size: 16px;
+        max-width: 400px;
+        width: 100%;
+        margin: 20px auto 0;
+        text-align: left;
+        word-wrap: break-word;
+      }
+      .profile-content .body .interests {
+        margin-top: 20px;
+      }
+      .profile-content .body .interests .inline li {
+        padding: 0;
+        margin: 5px;
+        color: #777;
+      }
+      .profile-content .body .meta {
+        margin-top: 20px;
+      }
+      .profile-content .body .meta .meta-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 400px;
+        margin: 0 auto;
+        font-size: 14px;
+        list-style: none;
+      }
+      .profile-content .body .meta .meta-sections .meta-header {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      .profile-content .body .meta .meta-sections .meta-list {
+        list-style: none;
+      }
+      .profile-content .body .meta .meta-sections .meta-list li {
+        display: block;
+        margin-top: 0.25em;
+      }
+      .profile-content .body .social-links {
+        margin-top: 20px;
+      }
+      .profile-content .body .social-links li {
+        color: rgba(54, 71, 78, 0.7);
+        font-size: 30px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0;
+        margin: 10px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        display: block;
+      }
+      .profile-content .body .social-links li:first-child {
+        align-items: center;
+        background-color: #333;
+        border-radius: 18px;
+        box-sizing: border-box;
+        display: flex;
+        font-size: 20px;
+        height: 36px;
+        justify-content: center;
+        text-align: center;
+        width: 36px;
+      }
+      .profile-content .body .social-links li svg {
+        fill: #333;
+      }
+      .profile-content .body .social-links li:first-child svg {
+        fill: #FBF3EF;
+        height: 21px;
+        width: 20px;
+      }
+      .profile-content .body .inline {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .profile-content .body .inline > li {
+        vertical-align: baseline;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="page-content">
+        <main>
+          <div class="profile-column">
+            <div class="profile-container">
+              <div class="profile">
+                <div class="profile-content">
+                  <div class="head">
+                    <div class="image"></div>
+                    <div class="name-headline">
+                      <section>
+                        <h1 class="name">Mauricio Collis de Oliveira</h1>
+                      </section>
+                      <section>
+                        <h2 class="headline">
+                          <span class="roles">
+                            <span class="role">Frontend Developer</span>
+                          </span>
+                        </h2>
+                      </section>
+                    </div>
+                  </div>
+
+                  <div class="body">
+                    <section class="spotlight">
+                      <a
+                        href="https://www.linkedin.com/in/mauricio-collis"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button"
+                        >View my vita</a
+                      >
+                    </section>
+                    <section class="bio">
+                      <div>
+                        <p>
+                          Hey there, I'm Mauricio. I'm a Frontend Developer from London, England and a fan of React, JavaScript, HTML and CSS.
+I'm also interested in Day Trading and Game Development.You can view my vita with a click on the button above.
+                        </p>
+                      </div>
+                    </section>
+                    <section class="interests">
+                      <ul class="inline">
+                        <li class="interest">#javascript</li>
+                        <li class="interest">#html</li>
+                        <li class="interest">#css</li>
+                        <li class="interest">#daytrading</li>
+                        <li class="interest">#gamedevelopment</li>
+                      </ul>
+                    </section>
+                    <section class="social-links">
+                      <ul class="inline">
+                        <li class="contact-me" title="Send me a message">
+                          <a 
+                            class="social-link" 
+                            title="Send me a message" 
+                            alt="Send me a message" 
+                            aria-label="Send me a message via email"
+                            href="mailto:mauriciocollis@hotmail.com"
+                            ><span class="SVGInline"
+                              ><svg 
+                                class="SVGInline-svg" 
+                                viewBox="0 0 36 18" 
+                                xmlns="http://www.w3.org/2000/svg"
+                              ><path 
+                                d="M17.9864841,17.7442683 L35.9560572,4.24918119 C35.9560572,2.99963608 34.9577476,2 33.7098606,2 L2.26310764,2 C1.01522062,2 0.0169109976,2.99963608 0.0169109976,4.24918119 L17.9864841,17.7442683 Z M17.9864841,21.7844641 L0.0169109976,8.28937702 L0.0777647581,29.7508188 C0.0777647581,31.0003639 1.07607438,32 2.3239614,32 L33.7707144,32 C35.0186014,32 36.016911,31.0003639 36.016911,29.7508188 L35.9560572,8.28937702 L17.9864841,21.7844641 Z"
+                              ></path></svg></span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="social-link"
+                            title="Visit me on GitHub"
+                            alt="Visit me on GitHub"
+                            aria-label="Come and visit my repositories on GitHub"
+                            href="https://github.com/mauriciotxt"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span class="SVGInline"
+                              ><svg
+                                class="SVGInline-svg"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 1000 1000"
+                              >
+                                <path
+                                  d="M1000 508c0 232-160 429-375 485v-131c0-41-10-98-52-131 134-20 239-99 239-223 0-51-21-102-58-144 11-47 17-105-4-148-53 5-106 32-145 56-33-8-67-14-105-14s-73 6-106 14c-39-24-91-51-144-56-21 43-16 101-5 148-37 42-57 93-57 144 0 124 105 203 239 223-20 15-32 36-40 57-105 2-189-81-190-81-5-4-12-5-16-2-6 3-9 10-7 16 2 5 44 124 201 172v100c-215-56-375-253-375-485 0-275 223-500 500-500 275 0 500 225 500 500z"
+                                ></path></svg></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a
+                            class="social-link"
+                            title="Visit me on Linkedin"
+                            alt="Visit me on Linkedin"
+                            aria-label="Stay in contact via Linkedin"
+                            href="https://www.linkedin.com/in/mauricio-collis"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span class="SVGInline"
+                              ><svg
+                                class="SVGInline-svg"
+                                viewBox="0 50 512 512"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xlink="http://www.w3.org/1999/xlink"
+                              ><path
+                                  d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+                                  C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+                                  M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+                                  c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+                                  s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"
+                                ></path></svg></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
